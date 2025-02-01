@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavel Litvinenko's Moodboard</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #1e1e1e;
+        }
+
+        .container {
+            width: calc(100% - 40px);
+            column-gap: 10px;
+            column-width: 300px;
+            margin: 20px;
+        }
+
+        .item {
+            position: relative;
+            margin-bottom: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: border-color 0.3s;
+            border: 5px solid #ffffff;
+        }
+        
+        .image-wrapper {
+            filter: grayscale(60%);
+            transition: filter 1s;
+        }
+
+        .image-wrapper.colorized {
+            filter: grayscale(0%);
+        }
+
+        .item.active {
+            border-color: #f2d894;
+        }
+        
+        .image-wrapper img {
+            width: 100%;
+            display: block;
+        }
+    </style>
+    <!-- Подключение библиотеки PowerGlitch -->
+    <script src="https://unpkg.com/powerglitch@latest/dist/powerglitch.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Список всех изображений с ведущими нулями в индексе -->
+        <div class="item" data-index="01">
+            <div class="image-wrapper">
+                <img src="img/01/static.jpeg" alt="Image 1" />
+            </div>
+        </div>
+        <div class="item" data-index="02">
+            <div class="image-wrapper">
+                <img src="img/02/static.jpeg" alt="Image 2" />
+            </div>
+        </div>
+        <div class="item" data-index="03">
+            <div class="image-wrapper">
+                <img src="img/03/static.jpeg" alt="Image 3" />
+            </div>
+        </div>
+        <div class="item" data-index="04">
+            <div class="image-wrapper">
+                <img src="img/04/static.jpeg" alt="Image 4" />
+            </div>
+        </div>
+        <div class="item" data-index="05">
+            <div class="image-wrapper">
+                <img src="img/05/static.jpeg" alt="Image 5" />
+            </div>
+        </div>
+        <div class="item" data-index="06">
+            <div class="image-wrapper">
+                <img src="img/06/static.jpeg" alt="Image 6" />
+            </div>
+        </div>
+        <div class="item" data-index="07">
+            <div class="image-wrapper">
+                <img src="img/07/static.jpeg" alt="Image 7" />
+            </div>
+        </div>
+        <div class="item" data-index="08">
+            <div class="image-wrapper">
+                <img src="img/08/static.jpeg" alt="Image 8" />
+            </div>
+        </div>
+        <div class="item" data-index="09">
+            <div class="image-wrapper">
+                <img src="img/09/static.jpeg" alt="Image 9" />
+            </div>
+        </div>
+        <div class="item" data-index="10">
+            <div class="image-wrapper">
+                <img src="img/10/static.jpeg" alt="Image 10" />
+            </div>
+        </div>
+        <div class="item" data-index="11">
+            <div class="image-wrapper">
+                <img src="img/11/static.jpeg" alt="Image 11" />
+            </div>
+        </div>
+        <div class="item" data-index="12">
+            <div class="image-wrapper">
+                <img src="img/12/static.jpeg" alt="Image 12" />
+            </div>
+        </div>
+        <div class="item" data-index="13">
+            <div class="image-wrapper">
+                <img src="img/13/static.jpeg" alt="Image 13" />
+            </div>
+        </div>
+        <div class="item" data-index="14">
+            <div class="image-wrapper">
+                <img src="img/14/static.jpeg" alt="Image 14" />
+            </div>
+        </div>
+        <div class="item" data-index="15">
+            <div class="image-wrapper">
+                <img src="img/15/static.jpeg" alt="Image 15" />
+            </div>
+        </div>
+        <div class="item" data-index="16">
+            <div class="image-wrapper">
+                <img src="img/16/static.jpeg" alt="Image 16" />
+            </div>
+        </div>
+        <div class="item" data-index="17">
+            <div class="image-wrapper">
+                <img src="img/17/static.jpeg" alt="Image 17" />
+            </div>
+        </div>
+        <div class="item" data-index="18">
+            <div class="image-wrapper">
+                <img src="img/18/static.jpeg" alt="Image 18" />
+            </div>
+        </div>
+        <div class="item" data-index="19">
+            <div class="image-wrapper">
+                <img src="img/19/static.jpeg" alt="Image 19" />
+            </div>
+        </div>
+        <div class="item" data-index="20">
+            <div class="image-wrapper">
+                <img src="img/20/static.jpeg" alt="Image 20" />
+            </div>
+        </div>
+        <div class="item" data-index="21">
+            <div class="image-wrapper">
+                <img src="img/21/static.jpeg" alt="Image 21" />
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Функция для инициализации глитч-эффекта
+        const powerGlitch = () => {
+            document.querySelectorAll('.item').forEach(item => {
+                const imageWrapper = item.querySelector('.image-wrapper');
+                PowerGlitch.glitch(imageWrapper, {
+                    playMode: 'hover',
+                    optimizeSeo: true,
+                    createContainers: true,
+                    hideOverflow: false,
+                    timing: {
+                        duration: 250,
+                        iterations: 1
+                    },
+                    glitchTimeSpan: {
+                        start: 0,
+                        end: 1
+                    },
+                    shake: {
+                        velocity: 15,
+                        amplitudeX: 0.2,
+                        amplitudeY: 0.2
+                    },
+                    slice: {
+                        count: 15,
+                        velocity: 20,
+                        minHeight: 0.02,
+                        maxHeight: 0.15,
+                        hueRotate: true
+                    },
+                    pulse: false
+                });
+
+                let isClicked = false;
+
+                item.addEventListener('mouseenter', () => {
+                    if (!isClicked) {
+                        item.querySelector('img').src = `img/${item.dataset.index}/movie.webp`;
+                        imageWrapper.classList.add('colorized');
+                    }
+                });
+
+                item.addEventListener('mouseleave', () => {
+                    if (!isClicked) {
+                        item.querySelector('img').src = `img/${item.dataset.index}/static.jpeg`;
+                        imageWrapper.classList.remove('colorized');
+                    }
+                });
+
+                item.addEventListener('click', () => {
+                    isClicked = !isClicked;
+                    if (isClicked) {
+                        item.classList.add('active'); // Фиолетовая рамка при клике
+                    } else {
+                        item.classList.remove('active'); // Убираем фиолетовую рамку
+                    }
+                });
+            });
+        };
+
+        // Инициализация эффекта после загрузки контента
+        document.addEventListener('DOMContentLoaded', powerGlitch);
+    </script>
+</body>
+</html>
